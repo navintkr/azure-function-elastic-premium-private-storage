@@ -59,7 +59,7 @@ resource "azurerm_storage_account" "functionAppStorage" {
   network_rules {
     default_action             = "Deny"
     bypass                     = ["AzureServices"]
-    ip_rules  = ["76.187.84.121"]
+    ip_rules  = ["X.X.X.X"] #public IP of the source
     virtual_network_subnet_ids = [azurerm_subnet.subnetStorage.id, azurerm_subnet.subnetFunctionApp.id]
   }
 }
